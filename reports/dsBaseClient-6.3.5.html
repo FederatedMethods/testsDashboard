@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>dsBaseClient/6.3.5 – DataSHIELD Test Reports</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-251449ada0ddbdd49c494e2ec9d5d6a9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="../site_libs/react-18.2.0/react.min.js"></script>
+<script src="../site_libs/react-18.2.0/react-dom.min.js"></script>
+<script src="../site_libs/reactwidget-2.0.0/react-tools.js"></script>
+<link href="../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="../site_libs/reactable-0.4.5/reactable.css" rel="stylesheet">
+<script src="../site_libs/reactable-binding-0.4.5/reactable.js"></script>
+
+
+</head>
+
+<body class="nav-sidebar docked fullcontent quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">dsBaseClient</li><li class="breadcrumb-item"><a href="../reports/dsBaseClient-6.3.5.html">Release</a></li><li class="breadcrumb-item"><a href="../reports/dsBaseClient-6.3.5.html">6.3.5</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="https://i0.wp.com/datashield.org/wp-content/uploads/2024/07/DS-logo-A4.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="https://i0.wp.com/datashield.org/wp-content/uploads/2024/07/DS-logo-A4.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">dsBase</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Release</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reports/dsBase-6.3.5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3.5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reports/dsBase-6.3.4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3.4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Development</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reports/dsBase-7.0.0-dev.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7.0.0-dev</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reports/dsBase-6.4.0-dev.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.4.0-dev</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reports/dsBase-6.3.6-dev.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3.6-dev</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">dsBaseClient</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Release</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reports/dsBaseClient-6.3.5.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">6.3.5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reports/dsBaseClient-6.3.4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3.4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Development</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../reports/dsBaseClient-6.3.6-dev.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6.3.6-dev</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">dsBaseClient</li><li class="breadcrumb-item"><a href="../reports/dsBaseClient-6.3.5.html">Release</a></li><li class="breadcrumb-item"><a href="../reports/dsBaseClient-6.3.5.html">6.3.5</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">dsBaseClient/6.3.5</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="cell">
+<div class="cell-output-display">
+<h3 class="anchored">Test type: _</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-0823b385995d29599d05" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0823b385995d29599d05">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["vm","OVERVIEW"],"Coverage":["NA","NaN"],"Test":["",""],"tests":[1,1],"skipped":[0,0],"failures":[0,0],"errors":[0,0],"time":[0.306,0.306]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"eb2e28f1121a67ed3ad309d00f2dab53"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: arg</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-ac83766f796ccaa2416e" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-ac83766f796ccaa2416e">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.Boole.R\" target=\"_blank\">ds.Boole<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asCharacter.R\" target=\"_blank\">ds.asCharacter<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asDataMatrix.R\" target=\"_blank\">ds.asDataMatrix<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asFactor.R\" target=\"_blank\">ds.asFactor<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asInteger.R\" target=\"_blank\">ds.asInteger<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asList.R\" target=\"_blank\">ds.asList<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asLogical.R\" target=\"_blank\">ds.asLogical<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asMatrix.R\" target=\"_blank\">ds.asMatrix<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asNumeric.R\" target=\"_blank\">ds.asNumeric<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.assign.R\" target=\"_blank\">ds.assign<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.auc.R\" target=\"_blank\">ds.auc<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.c.R\" target=\"_blank\">ds.c<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.cbind.R\" target=\"_blank\">ds.cbind<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.changeRefGroup.R\" target=\"_blank\">ds.changeRefGroup<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.class.R\" target=\"_blank\">ds.class<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.colnames.R\" target=\"_blank\">ds.colnames<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.completeCases.R\" target=\"_blank\">ds.completeCases<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.cor.R\" target=\"_blank\">ds.cor<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.corTest.R\" target=\"_blank\">ds.corTest<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.cov.R\" target=\"_blank\">ds.cov<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrame.R\" target=\"_blank\">ds.dataFrame<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameFill.R\" target=\"_blank\">ds.dataFrameFill<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameSort.R\" target=\"_blank\">ds.dataFrameSort<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameSubset.R\" target=\"_blank\">ds.dataFrameSubset<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dim.R\" target=\"_blank\">ds.dim<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.exists.R\" target=\"_blank\">ds.exists<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.exp.R\" target=\"_blank\">ds.exp<\/a>","ds.foobar","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.gamlss.R\" target=\"_blank\">ds.gamlss<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.glm.R\" target=\"_blank\">ds.glm<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.glmPredict.R\" target=\"_blank\">ds.glmPredict<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.glmSLMA.R\" target=\"_blank\">ds.glmSLMA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.glmerSLMA.R\" target=\"_blank\">ds.glmerSLMA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.isNA.R\" target=\"_blank\">ds.isNA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.isValid.R\" target=\"_blank\">ds.isValid<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.kurtosis.R\" target=\"_blank\">ds.kurtosis<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.length.R\" target=\"_blank\">ds.length<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.levels.R\" target=\"_blank\">ds.levels<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.lexis.R\" target=\"_blank\">ds.lexis<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.list.R\" target=\"_blank\">ds.list<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.lmerSLMA.R\" target=\"_blank\">ds.lmerSLMA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.log.R\" target=\"_blank\">ds.log<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.look.R\" target=\"_blank\">ds.look<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.ls.R\" target=\"_blank\">ds.ls<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.make.R\" target=\"_blank\">ds.make<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrix.R\" target=\"_blank\">ds.matrix<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixDet.R\" target=\"_blank\">ds.matrixDet<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixDet.report.R\" target=\"_blank\">ds.matrixDet.report<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixDiag.R\" target=\"_blank\">ds.matrixDiag<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixDimnames.R\" target=\"_blank\">ds.matrixDimnames<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixInvert.R\" target=\"_blank\">ds.matrixInvert<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixMult.R\" target=\"_blank\">ds.matrixMult<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixTranspose.R\" target=\"_blank\">ds.matrixTranspose<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.mean.R\" target=\"_blank\">ds.mean<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.meanByClass.R\" target=\"_blank\">ds.meanByClass<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.meanSdGp.R\" target=\"_blank\">ds.meanSdGp<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.merge.R\" target=\"_blank\">ds.merge<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.message.R\" target=\"_blank\">ds.message<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.metadata.R\" target=\"_blank\">ds.metadata<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.mice.R\" target=\"_blank\">ds.mice<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.names.R\" target=\"_blank\">ds.names<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.ns.R\" target=\"_blank\">ds.ns<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.numNA.R\" target=\"_blank\">ds.numNA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.qlspline.R\" target=\"_blank\">ds.qlspline<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.quantileMean.R\" target=\"_blank\">ds.quantileMean<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rBinom.R\" target=\"_blank\">ds.rBinom<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rNorm.R\" target=\"_blank\">ds.rNorm<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rPois.R\" target=\"_blank\">ds.rPois<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rUnif.R\" target=\"_blank\">ds.rUnif<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.ranksSecure.R\" target=\"_blank\">ds.ranksSecure<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rbind.R\" target=\"_blank\">ds.rbind<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.reShape.R\" target=\"_blank\">ds.reShape<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.recodeLevels.R\" target=\"_blank\">ds.recodeLevels<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.recodeValues.R\" target=\"_blank\">ds.recodeValues<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rep.R\" target=\"_blank\">ds.rep<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.replaceNA.R\" target=\"_blank\">ds.replaceNA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rm.R\" target=\"_blank\">ds.rm<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rowColCalc.R\" target=\"_blank\">ds.rowColCalc<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.sample.R\" target=\"_blank\">ds.sample<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.seq.R\" target=\"_blank\">ds.seq<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.setSeed.R\" target=\"_blank\">ds.setSeed<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.skewness.R\" target=\"_blank\">ds.skewness<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.subset.R\" target=\"_blank\">ds.subset<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.subsetByClass.R\" target=\"_blank\">ds.subsetByClass<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.summary.R\" target=\"_blank\">ds.summary<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.table.R\" target=\"_blank\">ds.table<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.table1D.R\" target=\"_blank\">ds.table1D<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.table2D.R\" target=\"_blank\">ds.table2D<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.tapply.R\" target=\"_blank\">ds.tapply<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.tapply.assign.R\" target=\"_blank\">ds.tapply.assign<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.testObjExists.R\" target=\"_blank\">ds.testObjExists<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.unList.R\" target=\"_blank\">ds.unList<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.unique.R\" target=\"_blank\">ds.unique<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.var.R\" target=\"_blank\">ds.var<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.vectorCalc.R\" target=\"_blank\">ds.vectorCalc<\/a>","OVERVIEW"],"Coverage":[100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,"NA",100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.Boole.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.asCharacter.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.asDataMatrix.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.asFactor.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.asInteger.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.asList.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.asLogical.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.asMatrix.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.asNumeric.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.assign.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.auc.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.c.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.cbind.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.changeRefGroup.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.class.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.colnames.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.completeCases.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.cor.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.corTest.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.cov.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.dataFrame.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.dataFrameFill.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.dataFrameSort.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.dataFrameSubset.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.dim.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.exists.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.exp.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.foobar.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.gamlss.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.glm.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.glmPredict.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.glmSLMA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.glmerSLMA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.isNA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.isValid.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.kurtosis.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.length.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.levels.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.lexis.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.list.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.lmerSLMA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.log.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.look.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.ls.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.make.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.matrix.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.matrixDet.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.matrixDet.report.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.matrixDiag.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.matrixDimnames.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.matrixInvert.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.matrixMult.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.matrixTranspose.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.mean.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.meanByClass.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.meanSdGp.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.merge.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.message.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.metadata.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.mice.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.names.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.ns.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.numNA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.qlspline.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.quantileMean.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.rBinom.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.rNorm.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.rPois.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.rUnif.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.ranksSecure.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.rbind.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.reShape.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.recodeLevels.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.recodeValues.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.rep.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.replaceNA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.rm.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.rowColCalc.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.sample.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.seq.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.setSeed.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.skewness.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.subset.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.subsetByClass.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.summary.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.table.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.table1D.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.table2D.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.tapply.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.tapply.assign.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.testObjExists.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.unList.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.unique.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.var.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-arg-ds.vectorCalc.R\" target=\"_blank\">View<\/a>",""],"tests":[5,1,1,3,1,1,1,1,1,1,2,1,2,3,1,1,1,3,2,3,2,3,10,30,3,1,1,30,3,2,18,6,19,1,2,10,5,2,7,1,14,1,1,12,1,1,1,1,2,1,1,1,1,3,4,1,5,1,8,1,7,8,1,10,3,2,2,2,2,31,1,4,4,7,1,2,1,3,3,1,1,10,1,2,1,11,2,1,8,8,1,1,2,2,1,399],"skipped":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"failures":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"errors":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"time":[5.816,7.948,6.385,6.108,6.061,5.951,5.952,5.945,6.149,5.878,0.207,6.062,8.692,6.269,5.992,5.974,6.055,6.803,6.298,6.954,6.637,6.29,7.656,7.578,6.372,5.93,6.145,6.557,6.082,6.066,9.507,6.111,7.807,5.857,6.226,6.4,7.194,6.203,5.989,5.896,7.702,5.972,5.963,6.164,5.899,5.825,6.092,5.98,5.892,5.778,5.877,5.932,5.906,6.935,9.178,5.921,6.949,5.957,6.829,5.891,6.565,6.271,5.758,6.517,6.961,5.858,5.954,5.967,6.082,17.412,5.958,5.956,6.705,7.009,6.175,6.084,6.343,7.735,6.103,6.229,6.153,6.552,6.202,6.408,6.142,7.848,6.391,6.008,6.588,6.658,6.071,6.222,6.162,7.259,6.324,615.274]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"e33faf025e38453db2cc3fee34a97261"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: datachk</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-e76c10d6ba2a17d318e9" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e76c10d6ba2a17d318e9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["ANTHRO","CLUSTER_INT","CLUSTER_SLO","CNSIM","DISCORDANT","DNSIM","FACTOR_LEVELS","SURVIVAL_EXPAND_WITH_MISSING","TESTING","OVERVIEW"],"Coverage":["NA","NA","NA","NA","NA","NA","NA","NA","NA","NaN"],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-datachk-ANTHRO.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-datachk-CLUSTER_INT.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-datachk-CLUSTER_SLO.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-datachk-CNSIM.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-datachk-DISCORDANT.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-datachk-DNSIM.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-datachk-FACTOR_LEVELS.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-datachk-SURVIVAL_EXPAND_WITH_MISSING.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-datachk-TESTING.R\" target=\"_blank\">View<\/a>",""],"tests":[108,236,236,281,76,188,188,204,316,1833],"skipped":[0,0,0,0,0,0,0,0,0,0],"failures":[2,0,0,0,0,0,0,0,0,2],"errors":[0,0,0,0,0,0,0,0,0,0],"time":[13.955,14.087,13.806,16.806,8.094,11.957,11.914,12.521,16.422,119.562]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"c48508474a4c761c91266a277f2e78e5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: disc</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-88751639c482b4843e5c" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-88751639c482b4843e5c">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.cor.R\" target=\"_blank\">ds.cor<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.cov.R\" target=\"_blank\">ds.cov<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.levels.R\" target=\"_blank\">ds.levels<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.mean.R\" target=\"_blank\">ds.mean<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.meanByClass.R\" target=\"_blank\">ds.meanByClass<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.sample.R\" target=\"_blank\">ds.sample<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.table.R\" target=\"_blank\">ds.table<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.var.R\" target=\"_blank\">ds.var<\/a>","OVERVIEW"],"Coverage":[100,100,100,100,100,100,100,100,100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-disc-ds.cor.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-disc-ds.cov.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-disc-ds.levels.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-disc-ds.mean.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-disc-ds.meanByClass.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-disc-ds.sample.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-disc-ds.table.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-disc-ds.var.R\" target=\"_blank\">View<\/a>",""],"tests":[27,39,7,1,1,22,33,1,131],"skipped":[2,2,1,1,1,0,0,1,8],"failures":[2,0,0,0,0,0,0,0,2],"errors":[0,0,0,0,0,0,0,0,0],"time":[16.196,11.51,6.226,5.787,5.889,8.657,21.642,5.787,81.694]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"faf0b1544f6bda4eebc963ac005a95c5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: discctrl</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-49e1a2ba205d237772ea" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-49e1a2ba205d237772ea">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.Boole.R\" target=\"_blank\">ds.Boole<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.c.R\" target=\"_blank\">ds.c<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.cbind.R\" target=\"_blank\">ds.cbind<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrame.R\" target=\"_blank\">ds.dataFrame<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameSort.R\" target=\"_blank\">ds.dataFrameSort<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameSubset.R\" target=\"_blank\">ds.dataFrameSubset<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dmtC2S.R\" target=\"_blank\">ds.dmtC2S<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.levels.R\" target=\"_blank\">ds.levels<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.ns.R\" target=\"_blank\">ds.ns<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rBinom.R\" target=\"_blank\">ds.rBinom<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rNorm.R\" target=\"_blank\">ds.rNorm<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rPois.R\" target=\"_blank\">ds.rPois<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rUnif.R\" target=\"_blank\">ds.rUnif<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rbind.R\" target=\"_blank\">ds.rbind<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.reShape.R\" target=\"_blank\">ds.reShape<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.recodeLevels.R\" target=\"_blank\">ds.recodeLevels<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.recodeValues.R\" target=\"_blank\">ds.recodeValues<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rep.R\" target=\"_blank\">ds.rep<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.sample.R\" target=\"_blank\">ds.sample<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.seq.R\" target=\"_blank\">ds.seq<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.setSeed.R\" target=\"_blank\">ds.setSeed<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.subset.R\" target=\"_blank\">ds.subset<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.subsetByClass.R\" target=\"_blank\">ds.subsetByClass<\/a>","OVERVIEW"],"Coverage":[100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.Boole.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.c.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.cbind.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.dataFrame.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.dataFrameSort.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.dataFrameSubset.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.dmtC2S.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.levels.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.ns.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.rBinom.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.rNorm.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.rPois.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.rUnif.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.rbind.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.reShape.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.recodeLevels.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.recodeValues.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.rep.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.sample.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.seq.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.setSeed.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.subset.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-discctrl-ds.subsetByClass.R\" target=\"_blank\">View<\/a>",""],"tests":[14,14,10,10,14,14,14,14,14,10,10,10,10,14,14,15,14,14,10,14,14,11,15,293],"skipped":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"failures":[12,11,5,1,3,3,11,8,8,7,7,7,7,11,11,11,11,11,7,11,8,7,11,189],"errors":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"time":[11.409,7.203,6.885,7.636,6.43,6.281,6.491,6.673,6.496,7.133,6.942,6.843,6.967,7.794,7.239,7.081,7.285,7.005,6.997,7.006,6.446,6.639,7.428,164.309]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"5ed609f856330cede2819eab6af46d93"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: expt</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-e3f369df9443d470205b" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-e3f369df9443d470205b">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrame.R\" target=\"_blank\">ds.dataFrame<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.glmerSLMA.R\" target=\"_blank\">ds.glmerSLMA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.lmerSLMA.R\" target=\"_blank\">ds.lmerSLMA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.mean.R\" target=\"_blank\">ds.mean<\/a>","ds.reshape","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.skewness.R\" target=\"_blank\">ds.skewness<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.var.R\" target=\"_blank\">ds.var<\/a>","OVERVIEW"],"Coverage":[100,100,100,100,"NA",100,100,100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-expt-ds.dataFrame.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-expt-ds.glmerSLMA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-expt-ds.lmerSLMA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-expt-ds.mean.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-expt-ds.reshape.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-expt-ds.skewness.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-expt-ds.var.R\" target=\"_blank\">View<\/a>",""],"tests":[172,4,4,56,1,40,48,325],"skipped":[0,0,0,0,1,0,0,1],"failures":[0,0,0,0,0,0,0,0],"errors":[0,0,0,0,0,0,0,0],"time":[99.889,7.735,6.77,40.915,0.475,23.32,41.619,220.723]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"17594616fb5f38d81ed7cae7571eb9ad"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: expt_dgr</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-273ea3afb644e2d32411" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-273ea3afb644e2d32411">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameSort.R\" target=\"_blank\">ds.dataFrameSort<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameSubset.R\" target=\"_blank\">ds.dataFrameSubset<\/a>","OVERVIEW"],"Coverage":[100,100,100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-expt_dgr-ds.dataFrameSort.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-expt_dgr-ds.dataFrameSubset.R\" target=\"_blank\">View<\/a>",""],"tests":[150,174,324],"skipped":[6,0,6],"failures":[0,0,0],"errors":[4,6,10],"time":[96.077,118.985,215.062]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"1e8d9a8b17c945888699ccabdf3066f5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: math</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-01beee3d7d510d75e9a5" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-01beee3d7d510d75e9a5">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.mean.R\" target=\"_blank\">ds.mean<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.var.R\" target=\"_blank\">ds.var<\/a>","OVERVIEW"],"Coverage":[100,100,100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-math-ds.mean.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-math-ds.var.R\" target=\"_blank\">View<\/a>",""],"tests":[96,136,232],"skipped":[0,0,0],"failures":[0,0,0],"errors":[0,0,0],"time":[77.445,87.793,165.238]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"b78eca987c0529b6fe904eec1601064d"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: math_bug</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-98b06e14d76a500efebe" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-98b06e14d76a500efebe">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asFactor.R\" target=\"_blank\">ds.asFactor<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.make.R\" target=\"_blank\">ds.make<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rPois.R\" target=\"_blank\">ds.rPois<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rUnif.R\" target=\"_blank\">ds.rUnif<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.recodeValues.R\" target=\"_blank\">ds.recodeValues<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.table.R\" target=\"_blank\">ds.table<\/a>","OVERVIEW"],"Coverage":[100,100,100,100,100,100,100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-math_bug-ds.asFactor.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-math_bug-ds.make.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-math_bug-ds.rPois.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-math_bug-ds.rUnif.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-math_bug-ds.recodeValues.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-math_bug-ds.table.R\" target=\"_blank\">View<\/a>",""],"tests":[2,64,28,36,15,1,146],"skipped":[0,0,0,0,0,0,0],"failures":[0,0,16,6,0,0,22],"errors":[2,0,0,0,2,1,5],"time":[13.557,70.342,41.181,36.009,13.538,0.09,174.717]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"9dcfba5d4cc2e90214a5b8e67bddf9c1"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: math_dgr</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-c9363eeb13bb4c453ac9" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c9363eeb13bb4c453ac9">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameSort.R\" target=\"_blank\">ds.dataFrameSort<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameSubset.R\" target=\"_blank\">ds.dataFrameSubset<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.skewness.R\" target=\"_blank\">ds.skewness<\/a>","OVERVIEW"],"Coverage":[100,100,100,100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-math_dgr-ds.dataFrameSort.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-math_dgr-ds.dataFrameSubset.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-math_dgr-ds.skewness.R\" target=\"_blank\">View<\/a>",""],"tests":[2,2,2,6],"skipped":[2,2,0,4],"failures":[0,0,0,0],"errors":[0,0,2,2],"time":[11.232,9.389,16.819,37.44]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"547d975b2678dc80a1a8cc88444ce080"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: perf</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-6a713a55bacd8ea72c5c" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6a713a55bacd8ea72c5c">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["conndisconn","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.abs.R\" target=\"_blank\">ds.abs<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asInteger.R\" target=\"_blank\">ds.asInteger<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asList.R\" target=\"_blank\">ds.asList<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asNumeric.R\" target=\"_blank\">ds.asNumeric<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.assign.R\" target=\"_blank\">ds.assign<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.class.R\" target=\"_blank\">ds.class<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.colnames.R\" target=\"_blank\">ds.colnames<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.exists.R\" target=\"_blank\">ds.exists<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.length.R\" target=\"_blank\">ds.length<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.mean.R\" target=\"_blank\">ds.mean<\/a>","void","OVERVIEW"],"Coverage":["NA",100,100,100,100,100,100,100,100,100,100,"NA",100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-conndisconn.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-ds.abs.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-ds.asInteger.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-ds.asList.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-ds.asNumeric.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-ds.assign.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-ds.class.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-ds.colnames.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-ds.exists.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-ds.length.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-ds.mean.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-perf-void.R\" target=\"_blank\">View<\/a>",""],"tests":[2,2,2,2,2,2,2,2,2,2,4,2,26],"skipped":[0,0,0,0,0,0,0,0,0,0,0,0,0],"failures":[0,1,1,1,1,1,1,1,1,1,2,0,11],"errors":[0,0,0,0,0,0,0,0,0,0,0,0,0],"time":[133.08,36.249,36.192,35.993,35.95,36.004,35.99,35.935,35.93,35.997,66.136,60.22,583.676]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#eeeeee","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"8fc6662980a788f4a1ab3cff2881299b"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: smk</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-343349a7e4df69eadedf" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-343349a7e4df69eadedf">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/checkClass.R\" target=\"_blank\">checkClass<\/a>","checkClass","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.Boole.R\" target=\"_blank\">ds.Boole<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.abs.R\" target=\"_blank\">ds.abs<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asCharacter.R\" target=\"_blank\">ds.asCharacter<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asDataMatrix.R\" target=\"_blank\">ds.asDataMatrix<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asFactor.R\" target=\"_blank\">ds.asFactor<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asFactorSimple.R\" target=\"_blank\">ds.asFactorSimple<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asInteger.R\" target=\"_blank\">ds.asInteger<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asList.R\" target=\"_blank\">ds.asList<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asLogical.R\" target=\"_blank\">ds.asLogical<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asMatrix.R\" target=\"_blank\">ds.asMatrix<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asNumeric.R\" target=\"_blank\">ds.asNumeric<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.assign.R\" target=\"_blank\">ds.assign<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.c.R\" target=\"_blank\">ds.c<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.cbind.R\" target=\"_blank\">ds.cbind<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.changeRefGroup.R\" target=\"_blank\">ds.changeRefGroup<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.class.R\" target=\"_blank\">ds.class<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.colnames.R\" target=\"_blank\">ds.colnames<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.completeCases.R\" target=\"_blank\">ds.completeCases<\/a>","ds.completeCases","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.cor.R\" target=\"_blank\">ds.cor<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.corTest.R\" target=\"_blank\">ds.corTest<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.cov.R\" target=\"_blank\">ds.cov<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrame.R\" target=\"_blank\">ds.dataFrame<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameFill.R\" target=\"_blank\">ds.dataFrameFill<\/a>","ds.dataFrameFill","ds.dataFrameFill","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameSort.R\" target=\"_blank\">ds.dataFrameSort<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dataFrameSubset.R\" target=\"_blank\">ds.dataFrameSubset<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dim.R\" target=\"_blank\">ds.dim<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.dmtC2S.R\" target=\"_blank\">ds.dmtC2S<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.elspline.R\" target=\"_blank\">ds.elspline<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.exists.R\" target=\"_blank\">ds.exists<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.exp.R\" target=\"_blank\">ds.exp<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.gamlss.R\" target=\"_blank\">ds.gamlss<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.getWGSR.R\" target=\"_blank\">ds.getWGSR<\/a>","ds.glm","ds.glm","ds.glm","ds.glmPredict","ds.glmPredict","ds.glmPredict","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.glmSLMA.R\" target=\"_blank\">ds.glmSLMA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.glmSummary.R\" target=\"_blank\">ds.glmSummary<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.glmerSLMA.R\" target=\"_blank\">ds.glmerSLMA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.hetcor.R\" target=\"_blank\">ds.hetcor<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.isNA.R\" target=\"_blank\">ds.isNA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.isValid.R\" target=\"_blank\">ds.isValid<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.kurtosis.R\" target=\"_blank\">ds.kurtosis<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.length.R\" target=\"_blank\">ds.length<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.levels.R\" target=\"_blank\">ds.levels<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.lexis.R\" target=\"_blank\">ds.lexis<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.list.R\" target=\"_blank\">ds.list<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.listClientsideFunctions.R\" target=\"_blank\">ds.listClientsideFunctions<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.listDisclosureSettings.R\" target=\"_blank\">ds.listDisclosureSettings<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.listServersideFunctions.R\" target=\"_blank\">ds.listServersideFunctions<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.lmerSLMA.R\" target=\"_blank\">ds.lmerSLMA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.log.R\" target=\"_blank\">ds.log<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.look.R\" target=\"_blank\">ds.look<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.ls.R\" target=\"_blank\">ds.ls<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.lspline.R\" target=\"_blank\">ds.lspline<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.make.R\" target=\"_blank\">ds.make<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrix.R\" target=\"_blank\">ds.matrix<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixDet.R\" target=\"_blank\">ds.matrixDet<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixDet.report.R\" target=\"_blank\">ds.matrixDet.report<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixDiag.R\" target=\"_blank\">ds.matrixDiag<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixDimnames.R\" target=\"_blank\">ds.matrixDimnames<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixInvert.R\" target=\"_blank\">ds.matrixInvert<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixMult.R\" target=\"_blank\">ds.matrixMult<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.matrixTranspose.R\" target=\"_blank\">ds.matrixTranspose<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.mean.R\" target=\"_blank\">ds.mean<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.meanByClass.R\" target=\"_blank\">ds.meanByClass<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.meanSdGp.R\" target=\"_blank\">ds.meanSdGp<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.merge.R\" target=\"_blank\">ds.merge<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.message.R\" target=\"_blank\">ds.message<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.metadata.R\" target=\"_blank\">ds.metadata<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.mice.R\" target=\"_blank\">ds.mice<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.names.R\" target=\"_blank\">ds.names<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.ns.R\" target=\"_blank\">ds.ns<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.numNA.R\" target=\"_blank\">ds.numNA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.qlspline.R\" target=\"_blank\">ds.qlspline<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.quantileMean.R\" target=\"_blank\">ds.quantileMean<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rBinom.R\" target=\"_blank\">ds.rBinom<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rNorm.R\" target=\"_blank\">ds.rNorm<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rPois.R\" target=\"_blank\">ds.rPois<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rUnif.R\" target=\"_blank\">ds.rUnif<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.ranksSecure.R\" target=\"_blank\">ds.ranksSecure<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rbind.R\" target=\"_blank\">ds.rbind<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.reShape.R\" target=\"_blank\">ds.reShape<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.recodeLevels.R\" target=\"_blank\">ds.recodeLevels<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.recodeValues.R\" target=\"_blank\">ds.recodeValues<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rep.R\" target=\"_blank\">ds.rep<\/a>","ds.rep","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.replaceNA.R\" target=\"_blank\">ds.replaceNA<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rm.R\" target=\"_blank\">ds.rm<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.rowColCalc.R\" target=\"_blank\">ds.rowColCalc<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.sample.R\" target=\"_blank\">ds.sample<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.seq.R\" target=\"_blank\">ds.seq<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.setSeed.R\" target=\"_blank\">ds.setSeed<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.skewness.R\" target=\"_blank\">ds.skewness<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.sqrt.R\" target=\"_blank\">ds.sqrt<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.subset.R\" target=\"_blank\">ds.subset<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.subsetByClass.R\" target=\"_blank\">ds.subsetByClass<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.summary.R\" target=\"_blank\">ds.summary<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.table.R\" target=\"_blank\">ds.table<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.table1D.R\" target=\"_blank\">ds.table1D<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.table2D.R\" target=\"_blank\">ds.table2D<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.tapply.R\" target=\"_blank\">ds.tapply<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.tapply.assign.R\" target=\"_blank\">ds.tapply.assign<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.testObjExists.R\" target=\"_blank\">ds.testObjExists<\/a>","ds.testObjExists","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.unList.R\" target=\"_blank\">ds.unList<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.unique.R\" target=\"_blank\">ds.unique<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.var.R\" target=\"_blank\">ds.var<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.vectorCalc.R\" target=\"_blank\">ds.vectorCalc<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/isDefined.R\" target=\"_blank\">isDefined<\/a>","OVERVIEW"],"Coverage":[100,"NA",100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,"NA",100,100,100,100,100,"NA","NA",100,100,100,100,100,100,100,100,100,"NA","NA","NA","NA","NA","NA",100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,"NA",100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,100,"NA",100,100,100,100,100,100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-checkClass.R\" target=\"_blank\">View<\/a>","","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.Boole.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.abs.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.asCharacter.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.asDataMatrix.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.asFactor.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.asFactorSimple.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.asInteger.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.asList.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.asLogical.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.asMatrix.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.asNumeric.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.assign.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.c.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.cbind.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.changeRefGroup.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.class.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.colnames.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.completeCases.R\" target=\"_blank\">View<\/a>","","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.cor.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.corTest.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.cov.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.dataFrame.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.dataFrameFill.R\" target=\"_blank\">View<\/a>","","","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.dataFrameSort.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.dataFrameSubset.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.dim.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.dmtC2S.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.elspline.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.exists.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.exp.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.gamlss.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.getWGSR.R\" target=\"_blank\">View<\/a>","","","","","","","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.glmSLMA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.glmSummary.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.glmerSLMA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.hetcor.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.isNA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.isValid.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.kurtosis.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.length.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.levels.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.lexis.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.list.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.listClientsideFunctions.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.listDisclosureSettings.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.listServersideFunctions.R\" target=\"_blank\">View<\/a>","","","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.look.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.ls.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.lspline.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.make.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.matrix.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.matrixDet.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.matrixDet.report.R\" target=\"_blank\">View<\/a>","","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.matrixDimnames.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.matrixInvert.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.matrixMult.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.matrixTranspose.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.mean.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.meanByClass.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.meanSdGp.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.merge.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.message.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.metadata.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.mice.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.names.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.ns.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.numNA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.qlspline.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.quantileMean.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.rBinom.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.rNorm.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.rPois.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.rUnif.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.ranksSecure.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.rbind.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.reShape.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.recodeLevels.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.recodeValues.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.rep.R\" target=\"_blank\">View<\/a>","","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.replaceNA.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.rm.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.rowColCalc.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.sample.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.seq.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.setSeed.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.skewness.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.sqrt.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.subset.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.subsetByClass.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.summary.R\" target=\"_blank\">View<\/a>","","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.table1D.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.table2D.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.tapply.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.tapply.assign.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.testObjExists.R\" target=\"_blank\">View<\/a>","","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.unList.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.unique.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.var.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-ds.vectorCalc.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk-isDefined.R\" target=\"_blank\">View<\/a>",""],"tests":[30,9,117,16,9,19,37,11,9,16,9,9,9,7,7,142,37,20,17,86,151,27,81,34,96,60,20,103,16,52,33,21,82,27,36,315,27,47,47,47,258,258,258,288,98,78,129,9,13,666,28,47,21,34,117,43,448,81,36,12,59,44,15,13,13,20,20,13,13,13,13,186,59,30,13,31,28,66,16,47,18,80,43,17,17,17,17,60,11,9,22,13,9,12,9,86,14,75,12,15,666,16,21,30,62,62,38,29,82,38,46,26,9,17,60,24,111,7465],"skipped":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"failures":[0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2],"errors":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"time":[7.944,10.692,10.908,7.426,6.832,7.236,15.59,8.146,6.902,6.54,6.709,6.8,6.842,6.684,6.651,23.901,8.381,6.652,7.706,13.102,22.208,7.615,7.969,7.64,16.288,9.107,6.683,12.791,7.594,11.452,6.405,7.767,9.259,6.845,8.919,9.843,9.465,15.541,8.941,12.828,12.743,12.261,13.432,23.128,14.797,31.93,12.299,6.269,6.426,30.319,7.572,7.769,7.386,7.483,6.468,6.281,7.537,21.168,9.07,6.405,7.019,7.693,8.062,6.945,7.483,6.816,8.016,7.382,7.495,8.039,7.514,15.066,21.189,6.816,10.163,8.944,6.951,20.679,7.043,7.531,7.031,9.172,7.826,6.872,6.773,6.686,6.787,42.938,7.745,6.811,8.344,7.254,6.709,7.294,12.001,11.035,8.785,9.27,7.144,6.193,29.75,6.926,8.149,9.753,11.818,16.843,7.899,6.366,8.912,11.319,7.531,6.296,7.049,6.698,7.054,7.019,10.923,1187.368]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#d4edda","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"24e7cb901c9f07814705425837b78ccb"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: smk_bug</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-a0ac5dbdb23ec7355759" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-a0ac5dbdb23ec7355759">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.listOpals.R\" target=\"_blank\">ds.listOpals<\/a>","OVERVIEW"],"Coverage":["NA","NaN"],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk_bug-ds.listOpals.R\" target=\"_blank\">View<\/a>",""],"tests":[2,2],"skipped":[0,0],"failures":[1,1],"errors":[0,0],"time":[7.808,7.808]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"a26b4b102cc5fb1e401ae51709e297b5"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: smk_dgr</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-01ecf24c1ce3e2924f4a" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-01ecf24c1ce3e2924f4a">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.asCharacter.R\" target=\"_blank\">ds.asCharacter<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.listClientsideFunctions.R\" target=\"_blank\">ds.listClientsideFunctions<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.listServersideFunctions.R\" target=\"_blank\">ds.listServersideFunctions<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.recodeValues.R\" target=\"_blank\">ds.recodeValues<\/a>","ds.recodeValues","ds.recodeValues","OVERVIEW"],"Coverage":[100,100,100,100,"NA","NA",100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk_dgr-ds.asCharacter.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk_dgr-ds.listClientsideFunctions.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk_dgr-ds.listServersideFunctions.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk_dgr-ds.recodeValues.R\" target=\"_blank\">View<\/a>","","",""],"tests":[9,15,37,10,22,18,111],"skipped":[0,0,0,0,0,0,0],"failures":[2,0,27,3,3,3,38],"errors":[0,0,0,1,4,3,8],"time":[11.96,6.753,7.568,8.683,14.057,12.068,61.089]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#eeeeee","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"cfc26cdeeed2f2329756af83d2c0a2c9"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+<h3 class="anchored">Test type: smk_expt</h3>
+<div class="reactable html-widget html-fill-item" id="htmlwidget-3e3e9860a13411ab9369" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-3e3e9860a13411ab9369">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"Function":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.mean.R\" target=\"_blank\">ds.mean<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/R/ds.ranksSecure.R\" target=\"_blank\">ds.ranksSecure<\/a>","OVERVIEW"],"Coverage":[100,100,100],"Test":["<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk_expt-ds.mean.R\" target=\"_blank\">View<\/a>","<a href=\"https://github.com/datashield/dsBaseClient/blob/6.3.5/tests/testthat/test-smk_expt-ds.ranksSecure.R\" target=\"_blank\">View<\/a>",""],"tests":[66,40,106],"skipped":[6,0,6],"failures":[0,0,0],"errors":[0,0,0],"time":[56.434,89.645,146.079]},"columns":[{"id":"Function","name":"Function","type":"character","align":"left","html":true},{"id":"Coverage","name":"Coverage","type":"numeric","align":"center","style":[{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"},{"background":"#d4edda","fontWeight":"bold"}]},{"id":"Test","name":"Test","type":"character","align":"center","html":true},{"id":"tests","name":"tests","type":"numeric","align":"center"},{"id":"skipped","name":"skipped","type":"numeric","align":"center"},{"id":"failures","name":"failures","type":"numeric","align":"center"},{"id":"errors","name":"errors","type":"numeric","align":"center"},{"id":"time","name":"time","type":"numeric","align":"center"}],"pagination":false,"highlight":true,"bordered":true,"striped":true,"dataKey":"7b480111ca6ee93807aac6a04c830029"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+<br>
+</div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
