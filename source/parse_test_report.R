@@ -190,18 +190,20 @@ tests_tbl_v2 <- tests_tbl |>
   # fill in sub-tests with test class
   tidyr::fill(test_class, .direction = "down") |>
   dplyr::mutate(
+    fn_name_sub2 = ifelse(fn_name_sub == "", "", paste0("-", fn_name_sub)),
     # create links to function script and test file
     github_script_link = file.path(
       GH_REPO,
       "R",
-      paste0(fn_name, fn_name_sub, ".R")
+      paste0(fn_name, ".R")
     ),
     github_test_link = file.path(
       GH_REPO,
       "tests/testthat",
-      paste0("test-", test_class, "-", fn_name, fn_name_sub, ".R")
+      paste0("test-", test_class, "-", fn_name, fn_name_sub2, ".R")
     )
-  )
+  ) |>
+  dplyr::select(-fn_name_sub2)
 
 # aggregate results by function name and test class
 tests_tbl_v3 <- tests_tbl_v2 |>
