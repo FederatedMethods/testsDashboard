@@ -42,7 +42,6 @@ output <- htmltools::tagList(
     x_overview <- x |>
       dplyr::summarise(
         fn_name = "OVERVIEW",
-        coverage = round(mean(as.numeric(file_coverage), na.rm = TRUE), 2),
         test_url = "",
         tests = sum(as.numeric(tests), na.rm = TRUE),
         skipped = sum(as.numeric(skipped), na.rm = TRUE),
