@@ -47,7 +47,13 @@ output <- htmltools::tagList(
         skipped = sum(as.numeric(skipped), na.rm = TRUE),
         failures = sum(as.numeric(failures), na.rm = TRUE),
         errors = sum(as.numeric(errors), na.rm = TRUE),
-        time = sum(as.numeric(time), na.rm = TRUE)
+        time = sum(as.numeric(time), na.rm = TRUE),
+        rate = round(tests - sum(skipped, failures, errors) / tests * 100, digits = 2),
+        # create HTML object and use title to include details of tests
+        rate = sprintf(
+          '<span title="Total: %s; Skipped: %s; Failures: %s; Errors: %s">%s</span>', 
+          tests, skipped, failures, errors, rate
+        )
       )
     
     # ---- Main table ----
@@ -80,8 +86,8 @@ output <- htmltools::tagList(
         )
       ) |>
       dplyr::select(-script_url, -test_class, -fn_name_sub, -fn_name_sub2) |>
-      dplyr::select(-tests, -skipped, -failures, -errors) |>
       dplyr::bind_rows(x_overview) |>
+      dplyr::select(-tests, -skipped, -failures, -errors) |>
       dplyr::rename(
         Function = fn_name,
         Coverage = coverage,
