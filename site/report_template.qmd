@@ -60,10 +60,11 @@ output <- htmltools::tagList(
         failures = as.numeric(failures),
         errors = as.numeric(errors),
         time = round(as.numeric(time), 4),
+        fn_name_sub2 = ifelse(fn_name_sub == "", "", paste0("-", fn_name_sub)),
         fn_name = ifelse(
           is.na(script_url),
           fn_name,
-          sprintf('<a href="%s" target="_blank">%s</a>', script_url, fn_name)
+          sprintf('<a href="%s" target="_blank">%s%s</a>', script_url, fn_name, fn_name_sub2)
         ),
         test_url = ifelse(
           is.na(test_url),
@@ -71,7 +72,7 @@ output <- htmltools::tagList(
           sprintf('<a href="%s" target="_blank">View</a>', test_url)
         )
       ) |>
-      dplyr::select(-script_url, -test_class, -fn_name_sub) |>
+      dplyr::select(-script_url, -test_class, -fn_name_sub, -fn_name_sub2) |>
       dplyr::bind_rows(x_overview) |>
       dplyr::rename(
         Function = fn_name,
