@@ -49,12 +49,7 @@ output <- htmltools::tagList(
         errors = sum(as.numeric(errors), na.rm = TRUE),
         time = sum(as.numeric(time), na.rm = TRUE),
         # calculate passing-rate: [skipped + failures + errors] / total tests
-        rate = round((1 - sum(skipped, failures, errors) / tests) * 100, digits = 2),
-        # create HTML object and use title to include details of tests
-        rate = sprintf(
-          '<span title="Total: %s; Skipped: %s; Failures: %s; Errors: %s">%s</span>', 
-          tests, skipped, failures, errors, rate
-        )
+        rate = round((1 - sum(skipped, failures, errors) / tests) * 100, digits = 2)
       )
     
     # ---- Main table ----
