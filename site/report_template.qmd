@@ -112,10 +112,10 @@ output <- htmltools::tagList(
               )
             }
           ),
-          tests = colDef(show = FALSE),
-          skipped = colDef(show = FALSE),
-          failures = colDef(show = FALSE),
-          errors = colDef(show = FALSE),
+          tests = reactable::colDef(show = FALSE),
+          skipped = reactable::colDef(show = FALSE),
+          failures = reactable::colDef(show = FALSE),
+          errors = reactable::colDef(show = FALSE),
           `Passing Rate [%]` = reactable::colDef(
             html = TRUE,
             cell = function(value, index) {
