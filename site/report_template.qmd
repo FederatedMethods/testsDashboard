@@ -48,6 +48,7 @@ if (session_info_available) {
     dplyr::select(-shard) |>
     dplyr::distinct()
   output <- htmltools::tagList(
+    htmltools::tags$div(id = "top"),
     htmltools::tags$h3("Session Information"),
     seq_len(nrow(session_info)) |>
     purrr::imap(\(x, idx) session_to_html(session_info[idx, ]))
@@ -77,7 +78,91 @@ coverage_colour <- function(x) {
   if (x < 80) return("#fff3cd")   # yellow-ish
   return("#d4edda")               # green-ish
 }
+```
 
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+# render overview for the tests
+test_list_overview <- test_list |> 
+  purrr::map(function(x) {
+    x |>
+      dplyr::summarise(
+        test_class = unique(test_class),
+        Tests = sum(as.numeric(tests), na.rm = TRUE),
+        Skipped = sum(as.numeric(skipped), na.rm = TRUE),
+        Failures = sum(as.numeric(failures), na.rm = TRUE),
+        Errors = sum(as.numeric(errors), na.rm = TRUE),
+        # calculate passing-rate: [skipped + failures + errors] / total tests
+        `Passing Rate [%]` = 
+          round((1 - sum(Skipped, Failures, Errors) / Tests) * 100, digits = 2)
+      )
+  }) |>
+  # combine rows for each test class
+  purrr::list_c() |>
+  # create long version of the data
+  tidyr::pivot_longer(-test_class) |>
+  # pivot back, so the test classes are the column headers
+  tidyr::pivot_wider(names_from = test_class)
+
+# create column definition
+cols <- names(test_list_overview)
+col_defs <- purrr::set_names(
+  purrr::map(cols, function(col) {
+    if (col == "name") {
+      return(reactable::colDef(
+        sticky = "left",
+        style = list(background = "white", borderRight = "1px solid #eaeaea")
+      ))
+    }
+    reactable::colDef(
+      name = htmltools::HTML(
+        sprintf(
+          '<a href="#test-type-%s" style="text-decoration:none;">%s</a>',
+          URLencode(col), 
+          col
+        )
+      ),
+      style = function(value, index) {
+        row <- test_list_overview[index, ]
+        # apply only to the 'passing rate' row
+        if (row$name == "Passing Rate [%]") {
+          list(
+            background = coverage_colour(value),
+            fontWeight = "bold"
+          )
+        }
+      },
+      html = TRUE
+    )
+  }),
+  cols
+)
+
+htmltools::tagList(
+  htmltools::tags$h3("Overview"),
+  reactable::reactable(
+    test_list_overview |>
+      dplyr::rename(`Variable` = name),
+    searchable = FALSE,
+    sortable = FALSE,
+    highlight = TRUE,
+    compact = TRUE,
+    bordered = TRUE,
+    striped = TRUE,
+    pagination = FALSE,
+    defaultColDef = reactable::colDef(align = "center"),
+    columns = col_defs,
+    rowStyle = list(verticalAlign = "middle")
+  )
+)
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
 # ---- Render all test classes ----
 output <- htmltools::tagList(
   lapply(test_list, function(x) {
@@ -136,7 +221,35 @@ output <- htmltools::tagList(
       )
 
     htmltools::tagList(
-      htmltools::tags$h3(sprintf("Test type: %s", test_class)),
+      htmltools::tags$h3(
+        style = "display:flex; justify-content:space-between; align-items:center;",
+        htmltools::tags$span(paste("Test type:", test_class)),
+        # htmltools::tags$a(href = "#top", "↑ Top", style = "text-decoration:none; color:inherit;")
+      ),
+      htmltools::tags$style(htmltools::HTML("
+        #back_to_top {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          padding: 10px 14px;
+          background: #f8f9fa;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          z-index: 9999;
+          font-size: 14px;
+          text-decoration: none;
+          color: #333;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        #back_to_top:hover {
+          background: #e9ecef;
+        }
+        ")),
+      htmltools::tags$a(
+        id = "back_to_top",
+        href = "#top",
+        "↑ Top"
+      ),
       reactable::reactable(
         x_tbl,
         searchable = FALSE,
