@@ -167,7 +167,16 @@ output <- htmltools::tagList(
             cell = function(value, index) {
               row <- x_tbl[index, ]
               sprintf(
-                '<span title="Total: %s; Skipped: %s; Failures: %s; Errors: %s">%s</span>',
+                paste0(
+                  '<div title="',
+                  'Total: %s&#10;',
+                  'Skipped: %s&#10;',
+                  'Failures: %s&#10;',
+                  'Errors: %s" ',
+                  'style="width:100%%; height:100%%; display:block;">',
+                  '%s',
+                  '</div>'
+                ),
                 row$tests,
                 row$skipped,
                 row$failures,
