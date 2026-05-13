@@ -257,29 +257,12 @@ covr_csv_2 <- covr_csv |>
         stringr::str_remove("\\.R") |>
         stringr::str_remove("R\\/*"),
       fn_name
-    ),
-    # detect naming style
-    is_hyphen_style = stringr::str_detect(name, "^[^-:]+-[^-:]+"),
-    # fn_name_sub ONLY for hyphen-style: class-function-sub
-    fn_name_sub = dplyr::if_else(
-      is_hyphen_style,
-      name |>
-        basename() |>
-        stringr::str_remove("\\.R") |>
-        # remove "class-function-" prefix (optional trailing dash)
-        stringr::str_remove("^[^-:]+-[^-:]+-?") |>
-        # keep only the first condition token if present
-        stringr::str_extract("^[^:-]+") |>
-        stringr::str_remove_all("[\\(\\)]") |>
-        tidyr::replace_na(""),
-      ""
     )
-  ) |>
-  dplyr::select(-is_hyphen_style)
+  )
 
 # Combine results
 covr_and_test_results <- tests_tbl_v4 |>
-  dplyr::left_join(covr_csv_2, by = dplyr::join_by(fn_name, fn_name_sub))
+  dplyr::left_join(covr_csv_2, by = dplyr::join_by(fn_name))
 
 # Tidy up results and combine into a wide table
 covr_and_test_results_v2 <- covr_and_test_results |>
