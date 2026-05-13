@@ -70,11 +70,6 @@ output <- htmltools::tagList(
         time = round(as.numeric(time), 4),
         # calculate passing-rate: [skipped + failures + errors] / total tests
         rate = round((1 - sum(skipped, failures, errors) / tests) * 100, digits = 2),
-        # create HTML object and use title to include details of tests
-        rate = sprintf(
-          '<span title="Total: %s; Skipped: %s; Failures: %s; Errors: %s">%s</span>', 
-          tests, skipped, failures, errors, rate
-        ),
         fn_name_sub2 = ifelse(fn_name_sub == "", "", paste0("-", fn_name_sub)),
         fn_name = ifelse(
           is.na(script_url),
@@ -90,8 +85,7 @@ output <- htmltools::tagList(
       dplyr::ungroup() |>
       dplyr::select(-script_url, -test_class, -fn_name_sub, -fn_name_sub2) |>
       dplyr::bind_rows(x_overview) |>
-      dplyr::select(-tests, -skipped, -failures, -errors) |>
-      dplyr::relocate(rate, coverage) |>
+      dplyr::relocate(rate, .before = coverage) |>
       dplyr::rename(
         Function = fn_name,
         `Coverage [%]` = coverage,
@@ -123,8 +117,23 @@ output <- htmltools::tagList(
               )
             }
           ),
+          tests = colDef(show = FALSE),
+          skipped = colDef(show = FALSE),
+          failures = colDef(show = FALSE),
+          errors = colDef(show = FALSE),
           `Passing Rate [%]` = reactable::colDef(
             html = TRUE,
+            cell = function(value, index) {
+              row <- x_tbl[index, ]
+              sprintf(
+                '<span title="Total: %s; Skipped: %s; Failures: %s; Errors: %s">%s</span>',
+                row$tests,
+                row$skipped,
+                row$failures,
+                row$errors,
+                value
+              )
+            },
             style = function(value) {
               list(
                 background = coverage_colour(value),
