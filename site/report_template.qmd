@@ -48,7 +48,8 @@ output <- htmltools::tagList(
         failures = sum(as.numeric(failures), na.rm = TRUE),
         errors = sum(as.numeric(errors), na.rm = TRUE),
         time = sum(as.numeric(time), na.rm = TRUE),
-        rate = round(tests - sum(skipped, failures, errors) / tests * 100, digits = 2),
+        # calculate passing-rate: [skipped + failures + errors] / total tests
+        rate = round((1 - sum(skipped, failures, errors) / tests) * 100, digits = 2),
         # create HTML object and use title to include details of tests
         rate = sprintf(
           '<span title="Total: %s; Skipped: %s; Failures: %s; Errors: %s">%s</span>', 
@@ -59,6 +60,7 @@ output <- htmltools::tagList(
     # ---- Main table ----
     x_tbl <- x |>
       dplyr::rename(coverage = file_coverage) |>
+      dplyr::rowwise() |>
       dplyr::mutate(
         coverage = as.numeric(coverage),
         tests = as.numeric(tests),
@@ -67,7 +69,7 @@ output <- htmltools::tagList(
         errors = as.numeric(errors),
         time = round(as.numeric(time), 4),
         # calculate passing-rate: [skipped + failures + errors] / total tests
-        rate = round(tests - sum(skipped, failures, errors) / tests * 100, digits = 2),
+        rate = round((1 - sum(skipped, failures, errors) / tests) * 100, digits = 2),
         # create HTML object and use title to include details of tests
         rate = sprintf(
           '<span title="Total: %s; Skipped: %s; Failures: %s; Errors: %s">%s</span>', 
@@ -85,14 +87,17 @@ output <- htmltools::tagList(
           sprintf('<a href="%s" target="_blank">View</a>', test_url)
         )
       ) |>
+      dplyr::ungroup() |>
       dplyr::select(-script_url, -test_class, -fn_name_sub, -fn_name_sub2) |>
       dplyr::bind_rows(x_overview) |>
       dplyr::select(-tests, -skipped, -failures, -errors) |>
+      dplyr::relocate(rate, coverage) |>
       dplyr::rename(
         Function = fn_name,
-        Coverage = coverage,
+        `Coverage [%]` = coverage,
         Tests = test_url,
-        `Passing Rate` = rate
+        `Time [s]` = time,
+        `Passing Rate [%]` = rate
       )
 
     htmltools::tagList(
@@ -110,7 +115,7 @@ output <- htmltools::tagList(
         columns = list(
           Function = reactable::colDef(html = TRUE, align = "left"),
           Tests = reactable::colDef(html = TRUE),
-          Coverage = reactable::colDef(
+          `Coverage [%]` = reactable::colDef(
             style = function(value) {
               list(
                 background = coverage_colour(value),
@@ -118,7 +123,7 @@ output <- htmltools::tagList(
               )
             }
           ),
-          `Passing Rate` = reactable::colDef(html = TRUE)
+          `Passing Rate [%]` = reactable::colDef(html = TRUE)
         )
       ),
       htmltools::tags$br()
