@@ -322,3 +322,44 @@ covr_and_test_results_v3 |>
     file.path(OUTPUT_DIR, paste0(Sys.Date(), "_covr_and_test_results.csv")),
     na = ""
   )
+
+# capture session info
+session_info_files <- list.files(
+  INPUT_DIR,
+  pattern = "^session_info.*txt$",
+  full.names = TRUE
+)
+
+extract_session_info <- function(file) {
+  txt <- readLines(file) |>
+    paste(collapse = "\n")
+  tibble::tibble(
+    # file = basename(file),
+    shard = stringr::str_match(basename(file), "shard-([^\n]+)\\.txt")[, 2] |>
+      stringr::str_remove("\\-$"),
+    r_version = stringr::str_match(txt, "R version ([^\n]+)")[, 2],
+    platform = stringr::str_match(txt, "Platform: ([^\n]+)")[, 2],
+    running_under = stringr::str_match(txt, "Running under: ([^\n]+)")[, 2],
+    blas = stringr::str_match(txt, "BLAS:\\s+([^\n]+)")[, 2],
+    lapack = stringr::str_match(txt, "LAPACK:\\s+([^\n]+)")[, 2],
+    timezone = stringr::str_match(txt, "time zone: ([^\n]+)")[, 2],
+    base_packages = stringr::str_match(
+      txt,
+      "attached base packages:\\n\\[1\\] ([^\n]+)"
+    )[, 2] |>
+      stringr::str_squish(),
+    namespace_packages = stringr::str_match(
+      txt,
+      "loaded via a namespace \\(and not attached\\):\\n\\[1\\] ([^\n]+)"
+    )[, 2] |>
+      stringr::str_squish()
+  )
+}
+
+session_info_files |>
+  purrr::map(extract_session_info) |>
+  purrr::list_c() |>
+  readr::write_excel_csv(
+    file.path(OUTPUT_DIR, paste0(Sys.Date(), "_session_info.csv")),
+    na = ""
+  )

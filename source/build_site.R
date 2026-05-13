@@ -20,7 +20,9 @@ if (length(rds_files) == 0) {
 meta <- tibble::tibble(
   rds = rds_files,
   pkg = fs::path_file(fs::path_dir(fs::path_dir(fs::path_dir(rds_files)))),
-  version = fs::path_file(fs::path_dir(fs::path_dir(rds_files)))
+  version = fs::path_file(fs::path_dir(fs::path_dir(rds_files))),
+  session_info = rds_files |>
+    stringr::str_replace("covr_and_test_results.Rds", "session_info.csv")
 ) |>
   # keep only latest
   dplyr::group_by(pkg, version) |>
@@ -35,6 +37,7 @@ purrr::walk(seq_len(nrow(meta)), function(i) {
   rds_path <- meta$rds[i]
   pkg <- meta$pkg[i]
   version <- meta$version[i]
+  sinfo_path <- meta$session_info[i]
 
   qmd_name <- glue::glue("reports/{pkg}-{version}.qmd")
   qmd_path <- file.path(SITE_DIR, qmd_name)
@@ -51,6 +54,7 @@ purrr::walk(seq_len(nrow(meta)), function(i) {
     "engine: knitr",
     "params:",
     glue::glue('  rds_path: "{normalizePath(rds_path, winslash = "/")}"'),
+    glue::glue('  session_info: "{normalizePath(sinfo_path, winslash = "/")}"'),
     glue::glue('  title: "{pkg} {version}"'),
     "---",
     ""

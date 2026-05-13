@@ -2,6 +2,7 @@
 title: "`r params$title`"
 params:
   rds_path: NULL
+  session_info: NULL
   title: NULL
 format:
   html:
@@ -9,6 +10,51 @@ format:
     toc: false
     self-contained: false
 ---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+session_info_available <- TRUE
+# ---- Safety check ----
+if (is.null(params$session_info) || !file.exists(params$session_info)) {
+  session_info_available <- FALSE
+}
+
+session_to_html <- function(x) {
+  htmltools::tags$div(
+    style = "
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 10px;
+      font-family: monospace;
+      background: #fafafa;
+    ",
+    htmltools::tags$div(htmltools::tags$b("R version:"), x$r_version),
+    htmltools::tags$div(htmltools::tags$b("Platform:"), x$platform),
+    htmltools::tags$div(htmltools::tags$b("Running under:"), x$running_under),
+    htmltools::tags$div(htmltools::tags$b("Time zone:"), x$timezone),
+    htmltools::tags$div(htmltools::tags$b("BLAS:"), x$blas),
+    htmltools::tags$div(htmltools::tags$b("LAPACK:"), x$lapack),
+    htmltools::tags$div(htmltools::tags$b("Base packages:"), x$base_packages),
+    htmltools::tags$div(htmltools::tags$b("Namespace:"), x$namespace_packages)
+    
+  )
+}
+
+if (session_info_available) {
+  session_info <- readr::read_csv(params$session_info) |>
+    dplyr::select(-shard) |>
+    dplyr::distinct()
+  output <- htmltools::tagList(
+    htmltools::tags$h3("Session Information"),
+    seq_len(nrow(session_info)) |>
+    purrr::imap(\(x, idx) session_to_html(session_info[idx, ]))
+  )
+  output
+}
+```
 
 ```{r}
 #| echo: false
