@@ -1,6 +1,6 @@
 <a href='https://datashield.org'><img src='https://i0.wp.com/datashield.org/wp-content/uploads/2024/07/DS-logo-A4.png' alt='DataSHIELD logo' align='right' height=70px/></a>
 
-# DataSHIELD packages tests’ Dashboard
+# DataSHIELD tests Dashboard
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -24,7 +24,36 @@ the config files inside [.github](.github):
 
 ----------
 
-The workflow follows the following steps:
+### Local testing
+
+To render the website locally, run the following command inside the root directory:
+```r
+system("Rscript source/build_site.R")
+```
+
+Then,
+```r
+browseURL("docs/index.html")
+```
+
+**NOTE:** for faster deployment, you might want to edit `source/parse_logs.R`
+locally to only parse a subset of the logs. To do so, you can modify the following:
+
+```r
+logs_dirs_versions |>
+  purrr::map(find_latest_version) |>
+  purrr::list_c() |>
+  # dplyr::slice(7) |>                  <<<<------ THIS LINE
+  .
+  .
+  .
+```
+
+----------
+
+### Flow
+
+The workflow runs the following steps:
 
 `Run unit tests & coverage [GHA]` \>\>\> `Parse results` \>\>\>
  \>\>\> `Render Quarto webpage`  \>\>\> `Publish site [GitHub pages]`
