@@ -49,7 +49,7 @@ jobs:
           ' | jq -s -c '.')
 
           # Define shards
-          SHARD_STRING="_-|arg|datachk|disc-|discctrl|expt_dgr|expt-|expt_bug|math_bug|math_dgr|math-|perf|smk_bug|smk_dgr|smk_expt|smk-"
+          SHARD_STRING="_-|arg|datachk|disc-|discctrl|expt_dgr|expt-|math_bug|math_dgr|math-|perf|smk_bug|smk_dgr|smk_expt|smk-"
           # SHARD_STRING="_-|arg|datachk|disc-|discctrl|expt_bug|expt_dgr|expt-|math_bug|math_dgr|math-|perf|smk_bug|smk_dgr|smk_expt|smk-"
           SHARDS=$(echo "$SHARD_STRING" | tr '|' '\n' | awk '{gsub(/"/,"\\\""); printf "\"%s\",",$0}' | sed 's/,$//')
           SHARDS="[${SHARDS}]"
@@ -386,10 +386,10 @@ jobs:
                 clean = TRUE
               )
 
-              # only keep functions with any coverage
-              idx <- coverage_result |>
-                sapply(\(x) getElement(x, "value") > 0)
-              coverage_result_filtered <- coverage_result[idx]
+              ## only keep functions with any coverage
+              #idx <- coverage_result |>
+              #  sapply(\(x) getElement(x, "value") > 0)
+              coverage_result_filtered <- coverage_result#[idx]
 
               # generate coverage xml to be push to Codecov
               if (length(coverage_result_filtered) == 0) {
