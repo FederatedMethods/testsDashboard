@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="smk_expt-ds.mean" timestamp="2026-06-13T04:57:26Z" hostname="runnervm1li68" tests="33" skipped="3" failures="0" errors="0" time="30.162">
+    <testcase time="10.263" classname="smk_expt_ds.mean" name="mean_values_combine_"/>
+    <testcase time="0.231" classname="smk_expt_ds.mean" name="mean_values_split_"/>
+    <testcase time="0.18" classname="smk_expt_ds.mean" name="mean_values_both_"/>
+    <testcase time="0.00499999999999901" classname="smk_expt_ds.mean" name="mean_values_combine_">
+      <skipped message="Reason: empty test ('test-smk_expt-ds.mean.R:44:1')"/>
+    </testcase>
+    <testcase time="0.0350000000000001" classname="smk_expt_ds.mean" name="mean_values_split_">
+      <skipped message="Reason: empty test ('test-smk_expt-ds.mean.R:51:1')"/>
+    </testcase>
+    <testcase time="0.0400000000000009" classname="smk_expt_ds.mean" name="mean_values_both_">
+      <skipped message="Reason: empty test ('test-smk_expt-ds.mean.R:58:1')"/>
+    </testcase>
+    <testcase time="0.209" classname="smk_expt_ds.mean" name="mean_values_combine_"/>
+    <testcase time="0.202" classname="smk_expt_ds.mean" name="mean_values_split_"/>
+    <testcase time="0.191000000000001" classname="smk_expt_ds.mean" name="mean_values_both_"/>
+    <testcase time="0.19" classname="smk_expt_ds.mean" name="mean_values_combine_"/>
+    <testcase time="0.193" classname="smk_expt_ds.mean" name="mean_values_split_"/>
+    <testcase time="0.148" classname="smk_expt_ds.mean" name="mean_values_both_"/>
+    <testcase time="0.188000000000001" classname="smk_expt_ds.mean" name="mean_values_combine_"/>
+    <testcase time="0.151" classname="smk_expt_ds.mean" name="mean_values_split_"/>
+    <testcase time="0.188000000000001" classname="smk_expt_ds.mean" name="mean_values_both_"/>
+    <testcase time="1.002" classname="smk_expt_ds.mean" name="mean_values_combine_"/>
+    <testcase time="0.901999999999999" classname="smk_expt_ds.mean" name="mean_values_split_"/>
+    <testcase time="1.002" classname="smk_expt_ds.mean" name="mean_values_both_"/>
+    <testcase time="0.969999999999999" classname="smk_expt_ds.mean" name="mean_values_combine_"/>
+    <testcase time="1.045" classname="smk_expt_ds.mean" name="mean_values_split_"/>
+    <testcase time="0.971" classname="smk_expt_ds.mean" name="mean_values_both_"/>
+    <testcase time="0.986999999999998" classname="smk_expt_ds.mean" name="mean_values_combine_"/>
+    <testcase time="0.986999999999998" classname="smk_expt_ds.mean" name="mean_values_split_"/>
+    <testcase time="1.032" classname="smk_expt_ds.mean" name="mean_values_both_"/>
+    <testcase time="0.928000000000001" classname="smk_expt_ds.mean" name="mean_values_combine_"/>
+    <testcase time="0.938000000000002" classname="smk_expt_ds.mean" name="mean_values_split_"/>
+    <testcase time="1.145" classname="smk_expt_ds.mean" name="mean_values_both_"/>
+    <testcase time="1.031" classname="smk_expt_ds.mean" name="mean_values_combine_"/>
+    <testcase time="0.928999999999998" classname="smk_expt_ds.mean" name="mean_values_split_"/>
+    <testcase time="0.931000000000001" classname="smk_expt_ds.mean" name="mean_values_both_"/>
+    <testcase time="0.935000000000002" classname="smk_expt_ds.mean" name="mean_values_combine_"/>
+    <testcase time="1.007" classname="smk_expt_ds.mean" name="mean_values_split_"/>
+    <testcase time="1.006" classname="smk_expt_ds.mean" name="mean_values_both_"/>
+  </testsuite>
+  <testsuite name="smk_expt-ds.ranksSecure" timestamp="2026-06-13T04:57:56Z" hostname="runnervm1li68" tests="20" skipped="0" failures="0" errors="0" time="44.895">
+    <testcase time="6.15799999999999" classname="smk_expt_ds.ranksSecure" name="setup"/>
+    <testcase time="0.00100000000000477" classname="smk_expt_ds.ranksSecure" name="setup"/>
+    <testcase time="0.00199999999999534" classname="smk_expt_ds.ranksSecure" name="setup"/>
+    <testcase time="0.827000000000005" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_all_positive"/>
+    <testcase time="0.358999999999995" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_all_positive"/>
+    <testcase time="0.00300000000000011" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_all_positive"/>
+    <testcase time="0.00300000000000011" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_all_positive"/>
+    <testcase time="0.00200000000000244" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_all_positive"/>
+    <testcase time="9.303" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_all_positive"/>
+    <testcase time="0.776000000000003" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_with_negative"/>
+    <testcase time="0.548999999999999" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_with_negative"/>
+    <testcase time="0.00200000000000244" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_with_negative"/>
+    <testcase time="0.00199999999999534" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_with_negative"/>
+    <testcase time="0.00100000000000477" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_with_negative"/>
+    <testcase time="8.803" classname="smk_expt_ds.ranksSecure" name="continous_without_NAs_with_negative"/>
+    <testcase time="8.814" classname="smk_expt_ds.ranksSecure" name="continous_with_NAs_all_positive"/>
+    <testcase time="9.11" classname="smk_expt_ds.ranksSecure" name="continous_with_NAs_with_negative"/>
+    <testcase time="0.177000000000007" classname="smk_expt_ds.ranksSecure" name="setup"/>
+    <testcase time="0.00199999999999534" classname="smk_expt_ds.ranksSecure" name="setup"/>
+    <testcase time="0.00100000000000477" classname="smk_expt_ds.ranksSecure" name="setup"/>
+  </testsuite>
+</testsuites>
