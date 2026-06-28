@@ -28,7 +28,7 @@
     "href": "reports/dsBase-6.4.0-dev.html",
     "title": "dsBase/6.4.0-dev",
     "section": "",
-    "text": "Session Information\n\n\nR version:\n4.6.0 (2026-04-24)\n\n\nPlatform:\nx86_64-pc-linux-gnu\n\n\nRunning under:\nUbuntu 24.04.4 LTS\n\n\nTime zone:\nUTC\n\n\nBLAS:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3\n\n\nLAPACK:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\n\nBase packages:\nstats graphics grDevices utils datasets methods base\n\n\nNamespace:\ncompiler_4.6.0\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n\nTest type: arg\n\n\n↑ Top\n\n\n\n\nTest type: disc\n\n\n↑ Top\n\n\n\n\nTest type: perf\n\n\n↑ Top\n\n\n\n\nTest type: smk\n\n\n↑ Top",
+    "text": "Session Information\n\n\nR version:\n4.6.1 (2026-06-24)\n\n\nPlatform:\nx86_64-pc-linux-gnu\n\n\nRunning under:\nUbuntu 24.04.4 LTS\n\n\nTime zone:\nUTC\n\n\nBLAS:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3\n\n\nLAPACK:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\n\nBase packages:\nstats graphics grDevices utils datasets methods base\n\n\nNamespace:\ncompiler_4.6.1\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n\nTest type: arg\n\n\n↑ Top\n\n\n\n\nTest type: disc\n\n\n↑ Top\n\n\n\n\nTest type: perf\n\n\n↑ Top\n\n\n\n\nTest type: smk\n\n\n↑ Top",
     "crumbs": [
       "dsBase",
       "Development",
@@ -40,7 +40,7 @@
     "href": "reports/dsBase-6.3.5.html",
     "title": "dsBase/6.3.5",
     "section": "",
-    "text": "Session Information\n\n\nR version:\n4.6.0 (2026-04-24)\n\n\nPlatform:\nx86_64-pc-linux-gnu\n\n\nRunning under:\nUbuntu 24.04.4 LTS\n\n\nTime zone:\nUTC\n\n\nBLAS:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3\n\n\nLAPACK:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\n\nBase packages:\nstats graphics grDevices utils datasets methods base\n\n\nNamespace:\ncompiler_4.6.0\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n\nTest type: arg\n\n\n↑ Top\n\n\n\n\nTest type: disc\n\n\n↑ Top\n\n\n\n\nTest type: perf\n\n\n↑ Top\n\n\n\n\nTest type: smk\n\n\n↑ Top",
+    "text": "Session Information\n\n\nR version:\n4.6.1 (2026-06-24)\n\n\nPlatform:\nx86_64-pc-linux-gnu\n\n\nRunning under:\nUbuntu 24.04.4 LTS\n\n\nTime zone:\nUTC\n\n\nBLAS:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3\n\n\nLAPACK:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\n\nBase packages:\nstats graphics grDevices utils datasets methods base\n\n\nNamespace:\ncompiler_4.6.1\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n\nTest type: arg\n\n\n↑ Top\n\n\n\n\nTest type: disc\n\n\n↑ Top\n\n\n\n\nTest type: perf\n\n\n↑ Top\n\n\n\n\nTest type: smk\n\n\n↑ Top",
     "crumbs": [
       "dsBase",
       "Release",
@@ -52,7 +52,7 @@
     "href": "index.html",
     "title": "\nDataSHIELD Test Reports\n",
     "section": "",
-    "text": "DataSHIELD Test Reports\nDataSHIELD is an infrastructure and series of R packages that enables the remote and non-disclosive analysis of sensitive research data. DataSHIELD has been used with real world and consented research data for over 10 years.\nThe following are auto-generated reports for testing key DataSHIELD R packages.\nLast updated: 2026-06-27 @ 08:03:06"
+    "text": "DataSHIELD Test Reports\nDataSHIELD is an infrastructure and series of R packages that enables the remote and non-disclosive analysis of sensitive research data. DataSHIELD has been used with real world and consented research data for over 10 years.\nThe following are auto-generated reports for testing key DataSHIELD R packages.\nLast updated: 2026-06-28 @ 03:14:17"
   },
   {
     "objectID": "index.html#available-reports",
@@ -66,7 +66,7 @@
     "href": "reports/dsBase-6.3.4.html",
     "title": "dsBase/6.3.4",
     "section": "",
-    "text": "Session Information\n\n\nR version:\n4.6.0 (2026-04-24)\n\n\nPlatform:\nx86_64-pc-linux-gnu\n\n\nRunning under:\nUbuntu 24.04.4 LTS\n\n\nTime zone:\nUTC\n\n\nBLAS:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3\n\n\nLAPACK:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\n\nBase packages:\nstats graphics grDevices utils datasets methods base\n\n\nNamespace:\ncompiler_4.6.0\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n\nTest type: arg\n\n\n↑ Top\n\n\n\n\nTest type: disc\n\n\n↑ Top\n\n\n\n\nTest type: perf\n\n\n↑ Top\n\n\n\n\nTest type: smk\n\n\n↑ Top",
+    "text": "Session Information\n\n\nR version:\n4.6.1 (2026-06-24)\n\n\nPlatform:\nx86_64-pc-linux-gnu\n\n\nRunning under:\nUbuntu 24.04.4 LTS\n\n\nTime zone:\nUTC\n\n\nBLAS:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3\n\n\nLAPACK:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\n\nBase packages:\nstats graphics grDevices utils datasets methods base\n\n\nNamespace:\ncompiler_4.6.1\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n\nTest type: arg\n\n\n↑ Top\n\n\n\n\nTest type: disc\n\n\n↑ Top\n\n\n\n\nTest type: perf\n\n\n↑ Top\n\n\n\n\nTest type: smk\n\n\n↑ Top",
     "crumbs": [
       "dsBase",
       "Release",
@@ -78,7 +78,7 @@
     "href": "reports/dsBase-6.3.6-dev.html",
     "title": "dsBase/6.3.6-dev",
     "section": "",
-    "text": "Session Information\n\n\nR version:\n4.6.0 (2026-04-24)\n\n\nPlatform:\nx86_64-pc-linux-gnu\n\n\nRunning under:\nUbuntu 24.04.4 LTS\n\n\nTime zone:\nUTC\n\n\nBLAS:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3\n\n\nLAPACK:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\n\nBase packages:\nstats graphics grDevices utils datasets methods base\n\n\nNamespace:\ncompiler_4.6.0\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n\nTest type: arg\n\n\n↑ Top\n\n\n\n\nTest type: disc\n\n\n↑ Top\n\n\n\n\nTest type: perf\n\n\n↑ Top\n\n\n\n\nTest type: smk\n\n\n↑ Top",
+    "text": "Session Information\n\n\nR version:\n4.6.1 (2026-06-24)\n\n\nPlatform:\nx86_64-pc-linux-gnu\n\n\nRunning under:\nUbuntu 24.04.4 LTS\n\n\nTime zone:\nUTC\n\n\nBLAS:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3\n\n\nLAPACK:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\n\nBase packages:\nstats graphics grDevices utils datasets methods base\n\n\nNamespace:\ncompiler_4.6.1\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n\nTest type: arg\n\n\n↑ Top\n\n\n\n\nTest type: disc\n\n\n↑ Top\n\n\n\n\nTest type: perf\n\n\n↑ Top\n\n\n\n\nTest type: smk\n\n\n↑ Top",
     "crumbs": [
       "dsBase",
       "Development",
@@ -90,7 +90,7 @@
     "href": "reports/dsBase-7.0.0-dev.html",
     "title": "dsBase/7.0.0-dev",
     "section": "",
-    "text": "Session Information\n\n\nR version:\n4.6.0 (2026-04-24)\n\n\nPlatform:\nx86_64-pc-linux-gnu\n\n\nRunning under:\nUbuntu 24.04.4 LTS\n\n\nTime zone:\nUTC\n\n\nBLAS:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3\n\n\nLAPACK:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\n\nBase packages:\nstats graphics grDevices utils datasets methods base\n\n\nNamespace:\ncompiler_4.6.0\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n\nTest type: arg\n\n\n↑ Top\n\n\n\n\nTest type: disc\n\n\n↑ Top\n\n\n\n\nTest type: perf\n\n\n↑ Top\n\n\n\n\nTest type: smk\n\n\n↑ Top",
+    "text": "Session Information\n\n\nR version:\n4.6.1 (2026-06-24)\n\n\nPlatform:\nx86_64-pc-linux-gnu\n\n\nRunning under:\nUbuntu 24.04.4 LTS\n\n\nTime zone:\nUTC\n\n\nBLAS:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3\n\n\nLAPACK:\n/usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0\n\n\nBase packages:\nstats graphics grDevices utils datasets methods base\n\n\nNamespace:\ncompiler_4.6.1\n\n\n\n\n\n\nOverview\n\n\n\n\n\n\n\nTest type: arg\n\n\n↑ Top\n\n\n\n\nTest type: disc\n\n\n↑ Top\n\n\n\n\nTest type: perf\n\n\n↑ Top\n\n\n\n\nTest type: smk\n\n\n↑ Top",
     "crumbs": [
       "dsBase",
       "Development",
