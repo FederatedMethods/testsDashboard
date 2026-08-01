@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="perf-conndisconn" timestamp="2026-08-01T04:19:07Z" hostname="runnervmvrwv9" tests="2" skipped="0" failures="0" errors="0" time="127.934">
+    <testcase time="127.922" classname="perf_conndisconn" name="simple_connect_disconnect_performance"/>
+    <testcase time="0.0120000000000005" classname="perf_conndisconn" name="simple_connect_disconnect_performance"/>
+  </testsuite>
+  <testsuite name="perf-ds.abs" timestamp="2026-08-01T04:21:15Z" hostname="runnervmvrwv9" tests="2" skipped="0" failures="1" errors="0" time="34.415">
+    <testcase time="34.398" classname="perf_ds.abs" name="combine_performance">
+      <failure type="failure" message="Expected Observed rate &gt; lower threshold on rate. ('test-perf-ds.abs.R:49:5')">Expected Observed rate &gt; lower threshold on rate.
+Actual comparison: 1.6 &lt;= 3.1
+Difference: -1.6 &lt;= 0</failure>
+    </testcase>
+    <testcase time="0.0169999999999959" classname="perf_ds.abs" name="combine_performance"/>
+  </testsuite>
+  <testsuite name="perf-ds.asInteger" timestamp="2026-08-01T04:21:49Z" hostname="runnervmvrwv9" tests="2" skipped="0" failures="1" errors="0" time="34.939">
+    <testcase time="34.931" classname="perf_ds.asInteger" name="combine_performance">
+      <failure type="failure" message="Expected Observed rate &gt; lower threshold on rate. ('test-perf-ds.asInteger.R:49:5')">Expected Observed rate &gt; lower threshold on rate.
+Actual comparison: 1.4 &lt;= 2.8
+Difference: -1.5 &lt;= 0</failure>
+    </testcase>
+    <testcase time="0.00800000000000978" classname="perf_ds.asInteger" name="combine_performance"/>
+  </testsuite>
+  <testsuite name="perf-ds.asList" timestamp="2026-08-01T04:22:24Z" hostname="runnervmvrwv9" tests="2" skipped="0" failures="1" errors="0" time="34.558">
+    <testcase time="34.55" classname="perf_ds.asList" name="combine_performance">
+      <failure type="failure" message="Expected Observed rate &gt; lower threshold on rate. ('test-perf-ds.asList.R:49:5')">Expected Observed rate &gt; lower threshold on rate.
+Actual comparison: 3.4 &lt;= 6.2
+Difference: -2.9 &lt;= 0</failure>
+    </testcase>
+    <testcase time="0.00800000000000978" classname="perf_ds.asList" name="combine_performance"/>
+  </testsuite>
+  <testsuite name="perf-ds.asNumeric" timestamp="2026-08-01T04:22:59Z" hostname="runnervmvrwv9" tests="2" skipped="0" failures="1" errors="0" time="34.622">
+    <testcase time="34.614" classname="perf_ds.asNumeric" name="combine_performance">
+      <failure type="failure" message="Expected Observed rate &gt; lower threshold on rate. ('test-perf-ds.asNumeric.R:49:5')">Expected Observed rate &gt; lower threshold on rate.
+Actual comparison: 1.4 &lt;= 2.9
+Difference: -1.4 &lt;= 0</failure>
+    </testcase>
+    <testcase time="0.0080000000000382" classname="perf_ds.asNumeric" name="combine_performance"/>
+  </testsuite>
+  <testsuite name="perf-ds.assign" timestamp="2026-08-01T04:23:33Z" hostname="runnervmvrwv9" tests="2" skipped="0" failures="1" errors="0" time="34.412">
+    <testcase time="34.404" classname="perf_ds.assign" name="performance">
+      <failure type="failure" message="Expected Observed rate &gt; lower threshold on rate. ('test-perf-ds.assign.R:49:5')">Expected Observed rate &gt; lower threshold on rate.
+Actual comparison: 2.5 &lt;= 5.3
+Difference: -2.7 &lt;= 0</failure>
+    </testcase>
+    <testcase time="0.00799999999998136" classname="perf_ds.assign" name="performance"/>
+  </testsuite>
+  <testsuite name="perf-ds.class" timestamp="2026-08-01T04:24:08Z" hostname="runnervmvrwv9" tests="2" skipped="0" failures="1" errors="0" time="34.193">
+    <testcase time="34.185" classname="perf_ds.class" name="combine_performance">
+      <failure type="failure" message="Expected Observed rate &gt; lower threshold on rate. ('test-perf-ds.class.R:49:5')">Expected Observed rate &gt; lower threshold on rate.
+Actual comparison: 3.6 &lt;= 6.9
+Difference: -3.3 &lt;= 0</failure>
+    </testcase>
+    <testcase time="0.00799999999998136" classname="perf_ds.class" name="combine_performance"/>
+  </testsuite>
+  <testsuite name="perf-ds.colnames" timestamp="2026-08-01T04:24:42Z" hostname="runnervmvrwv9" tests="2" skipped="0" failures="1" errors="0" time="34.565">
+    <testcase time="34.557" classname="perf_ds.colnames" name="combine_performance">
+      <failure type="failure" message="Expected Observed rate &gt; lower threshold on rate. ('test-perf-ds.colnames.R:49:5')">Expected Observed rate &gt; lower threshold on rate.
+Actual comparison: 7.2 &lt;= 12.8
+Difference: -5.7 &lt;= 0</failure>
+    </testcase>
+    <testcase time="0.00799999999998136" classname="perf_ds.colnames" name="combine_performance"/>
+  </testsuite>
+  <testsuite name="perf-ds.exists" timestamp="2026-08-01T04:25:17Z" hostname="runnervmvrwv9" tests="2" skipped="0" failures="1" errors="0" time="34.143">
+    <testcase time="34.135" classname="perf_ds.exists" name="combine_performance">
+      <failure type="failure" message="Expected Observed rate &gt; lower threshold on rate. ('test-perf-ds.exists.R:49:5')">Expected Observed rate &gt; lower threshold on rate.
+Actual comparison: 7.7 &lt;= 12.9
+Difference: -5.1 &lt;= 0</failure>
+    </testcase>
+    <testcase time="0.00799999999998136" classname="perf_ds.exists" name="combine_performance"/>
+  </testsuite>
+  <testsuite name="perf-ds.length" timestamp="2026-08-01T04:25:51Z" hostname="runnervmvrwv9" tests="2" skipped="0" failures="1" errors="0" time="34.251">
+    <testcase time="34.242" classname="perf_ds.length" name="combine_performance">
+      <failure type="failure" message="Expected Observed rate &gt; lower threshold on rate. ('test-perf-ds.length.R:49:5')">Expected Observed rate &gt; lower threshold on rate.
+Actual comparison: 7.7 &lt;= 12.7
+Difference: -5.1 &lt;= 0</failure>
+    </testcase>
+    <testcase time="0.00899999999995771" classname="perf_ds.length" name="combine_performance"/>
+  </testsuite>
+  <testsuite name="perf-ds.mean" timestamp="2026-08-01T04:26:25Z" hostname="runnervmvrwv9" tests="4" skipped="0" failures="2" errors="0" time="64.254">
+    <testcase time="34.188" classname="perf_ds.mean" name="combine_performance">
+      <failure type="failure" message="Expected Observed rate &gt; lower threshold on rate. ('test-perf-ds.mean.R:49:5')">Expected Observed rate &gt; lower threshold on rate.
+Actual comparison: 7.8 &lt;= 12.8
+Difference: -5.1 &lt;= 0</failure>
+    </testcase>
+    <testcase time="0.00799999999998136" classname="perf_ds.mean" name="combine_performance"/>
+    <testcase time="30.049" classname="perf_ds.mean" name="split_performance">
+      <failure type="failure" message="Expected Observed rate &gt; lower threshold on rate. ('test-perf-ds.mean.R:80:5')">Expected Observed rate &gt; lower threshold on rate.
+Actual comparison: 7.7 &lt;= 12.9
+Difference: -5.1 &lt;= 0</failure>
+    </testcase>
+    <testcase time="0.00900000000001455" classname="perf_ds.mean" name="split_performance"/>
+  </testsuite>
+  <testsuite name="perf-void" timestamp="2026-08-01T04:27:29Z" hostname="runnervmvrwv9" tests="2" skipped="0" failures="0" errors="0" time="60.222">
+    <testcase time="60.22" classname="perf_void" name="simple_void_performance"/>
+    <testcase time="0.00200000000006639" classname="perf_void" name="simple_void_performance"/>
+  </testsuite>
+</testsuites>
