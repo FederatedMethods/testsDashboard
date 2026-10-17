@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="perf-conndisconn" timestamp="2026-10-17T04:19:10Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="127.398">
+    <testcase time="127.374" classname="perf_conndisconn" name="simple_connect_disconnect_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("conndisconn::perf::simple0") at test-perf-conndisconn.R:39:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.0190000000000055" classname="perf_conndisconn" name="simple_connect_disconnect_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("conndisconn::perf::simple0") at test-perf-conndisconn.R:39:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_conndisconn" name="simple_connect_disconnect_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-conndisconn.R:39:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("conndisconn::perf::simple0") at test-perf-conndisconn.R:39:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.abs" timestamp="2026-10-17T04:21:18Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.576">
+    <testcase time="34.565" classname="perf_ds.abs" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.abs::perf::0") at test-perf-ds.abs.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.abs" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.abs::perf::0") at test-perf-ds.abs.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00600000000000023" classname="perf_ds.abs" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.abs.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.abs::perf::0") at test-perf-ds.abs.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.asCharacter" timestamp="2026-10-17T04:21:52Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.128">
+    <testcase time="34.118" classname="perf_ds.asCharacter" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asCharacter::perf::0") at test-perf-ds.asCharacter.R:36:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.asCharacter" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asCharacter::perf::0") at test-perf-ds.asCharacter.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00500000000002387" classname="perf_ds.asCharacter" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.asCharacter.R:36:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asCharacter::perf::0") at test-perf-ds.asCharacter.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.asDataMatrix" timestamp="2026-10-17T04:22:27Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.613">
+    <testcase time="34.603" classname="perf_ds.asDataMatrix" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asDataMatrix::perf::0") at test-perf-ds.asDataMatrix.R:36:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00500000000002387" classname="perf_ds.asDataMatrix" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asDataMatrix::perf::0") at test-perf-ds.asDataMatrix.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.asDataMatrix" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.asDataMatrix.R:36:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asDataMatrix::perf::0") at test-perf-ds.asDataMatrix.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.asInteger" timestamp="2026-10-17T04:23:01Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.538">
+    <testcase time="34.528" classname="perf_ds.asInteger" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asInteger::perf:0") at test-perf-ds.asInteger.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.0050000000000523" classname="perf_ds.asInteger" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asInteger::perf:0") at test-perf-ds.asInteger.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.asInteger" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.asInteger.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asInteger::perf:0") at test-perf-ds.asInteger.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.asList" timestamp="2026-10-17T04:23:36Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.036">
+    <testcase time="34.025" classname="perf_ds.asList" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asList::perf:0") at test-perf-ds.asList.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00600000000002865" classname="perf_ds.asList" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asList::perf:0") at test-perf-ds.asList.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.asList" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.asList.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asList::perf:0") at test-perf-ds.asList.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.asLogical" timestamp="2026-10-17T04:24:10Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.078">
+    <testcase time="34.068" classname="perf_ds.asLogical" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asLogical::perf::0") at test-perf-ds.asLogical.R:36:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.asLogical" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asLogical::perf::0") at test-perf-ds.asLogical.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.asLogical" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.asLogical.R:36:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asLogical::perf::0") at test-perf-ds.asLogical.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.asMatrix" timestamp="2026-10-17T04:24:44Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.328">
+    <testcase time="34.319" classname="perf_ds.asMatrix" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asMatrix::perf::0") at test-perf-ds.asMatrix.R:36:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.asMatrix" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asMatrix::perf::0") at test-perf-ds.asMatrix.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.0040000000000191" classname="perf_ds.asMatrix" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.asMatrix.R:36:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asMatrix::perf::0") at test-perf-ds.asMatrix.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.asNumeric" timestamp="2026-10-17T04:25:18Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.22">
+    <testcase time="34.21" classname="perf_ds.asNumeric" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asNumeric::perf:0") at test-perf-ds.asNumeric.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.asNumeric" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asNumeric::perf:0") at test-perf-ds.asNumeric.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.0050000000000523" classname="perf_ds.asNumeric" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.asNumeric.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.asNumeric::perf:0") at test-perf-ds.asNumeric.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.assign" timestamp="2026-10-17T04:25:52Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.073">
+    <testcase time="34.058" classname="perf_ds.assign" name="performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.assign::perf::0") at test-perf-ds.assign.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00999999999999091" classname="perf_ds.assign" name="performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.assign::perf::0") at test-perf-ds.assign.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.assign" name="performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.assign.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.assign::perf::0") at test-perf-ds.assign.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.class" timestamp="2026-10-17T04:26:26Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="33.876">
+    <testcase time="33.866" classname="perf_ds.class" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.class::perf::combine:0") at test-perf-ds.class.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.class" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.class::perf::combine:0") at test-perf-ds.class.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.class" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.class.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.class::perf::combine:0") at test-perf-ds.class.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.colnames" timestamp="2026-10-17T04:27:00Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="33.952">
+    <testcase time="33.941" classname="perf_ds.colnames" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.colnames::perf:0") at test-perf-ds.colnames.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00599999999997181" classname="perf_ds.colnames" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.colnames::perf:0") at test-perf-ds.colnames.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.colnames" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.colnames.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.colnames::perf:0") at test-perf-ds.colnames.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.completeCases" timestamp="2026-10-17T04:27:34Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="33.947">
+    <testcase time="33.9370000000001" classname="perf_ds.completeCases" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.completeCases::perf::combine:0") at test-perf-ds.completeCases.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00599999999997181" classname="perf_ds.completeCases" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.completeCases::perf::combine:0") at test-perf-ds.completeCases.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.0040000000000191" classname="perf_ds.completeCases" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.completeCases.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.completeCases::perf::combine:0") at test-perf-ds.completeCases.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.dim" timestamp="2026-10-17T04:28:08Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="33.979">
+    <testcase time="33.968" classname="perf_ds.dim" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.dim::perf::combine:0") at test-perf-ds.dim.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00599999999997181" classname="perf_ds.dim" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.dim::perf::combine:0") at test-perf-ds.dim.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.dim" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.dim.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.dim::perf::combine:0") at test-perf-ds.dim.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.exists" timestamp="2026-10-17T04:28:42Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.084">
+    <testcase time="34.073" classname="perf_ds.exists" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.exists::perf::combine:0") at test-perf-ds.exists.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00500000000010914" classname="perf_ds.exists" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.exists::perf::combine:0") at test-perf-ds.exists.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00599999999997181" classname="perf_ds.exists" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.exists.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.exists::perf::combine:0") at test-perf-ds.exists.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.exp" timestamp="2026-10-17T04:29:16Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="33.941">
+    <testcase time="33.9299999999999" classname="perf_ds.exp" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.exp::perf::0") at test-perf-ds.exp.R:36:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00599999999997181" classname="perf_ds.exp" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.exp::perf::0") at test-perf-ds.exp.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00500000000010914" classname="perf_ds.exp" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.exp.R:36:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.exp::perf::0") at test-perf-ds.exp.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.isNA" timestamp="2026-10-17T04:29:50Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.088">
+    <testcase time="34.077" classname="perf_ds.isNA" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.isNA::perf::combine:0") at test-perf-ds.isNA.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00599999999997181" classname="perf_ds.isNA" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.isNA::perf::combine:0") at test-perf-ds.isNA.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.isNA" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.isNA.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.isNA::perf::combine:0") at test-perf-ds.isNA.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.length" timestamp="2026-10-17T04:30:24Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.082">
+    <testcase time="34.072" classname="perf_ds.length" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.length::perf::combine:0") at test-perf-ds.length.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00599999999997181" classname="perf_ds.length" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.length::perf::combine:0") at test-perf-ds.length.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.0040000000000191" classname="perf_ds.length" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.length.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.length::perf::combine:0") at test-perf-ds.length.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.levels" timestamp="2026-10-17T04:30:58Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.099">
+    <testcase time="34.0889999999999" classname="perf_ds.levels" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.levels::perf::combine:0") at test-perf-ds.levels.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.levels" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.levels::perf::combine:0") at test-perf-ds.levels.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.levels" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.levels.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.levels::perf::combine:0") at test-perf-ds.levels.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.log" timestamp="2026-10-17T04:31:33Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.415">
+    <testcase time="34.4050000000001" classname="perf_ds.log" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.log::perf::0") at test-perf-ds.log.R:36:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.log" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.log::perf::0") at test-perf-ds.log.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.log" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.log.R:36:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.log::perf::0") at test-perf-ds.log.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.ls" timestamp="2026-10-17T04:32:07Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.041">
+    <testcase time="34.0309999999999" classname="perf_ds.ls" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.ls::perf::combine:0") at test-perf-ds.ls.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.ls" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.ls::perf::combine:0") at test-perf-ds.ls.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.ls" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.ls.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.ls::perf::combine:0") at test-perf-ds.ls.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.mean" timestamp="2026-10-17T04:32:41Z" hostname="runnervm8k3b6" tests="6" skipped="0" failures="0" errors="2" time="64.049">
+    <testcase time="33.946" classname="perf_ds.mean" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.mean::perf::combine:0") at test-perf-ds.mean.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.mean" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.mean::perf::combine:0") at test-perf-ds.mean.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.mean" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.mean.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.mean::perf::combine:0") at test-perf-ds.mean.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+    <testcase time="30.083" classname="perf_ds.mean" name="split_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.mean::perf::split:0") at test-perf-ds.mean.R:68:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00500000000010914" classname="perf_ds.mean" name="split_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.mean::perf::split:0") at test-perf-ds.mean.R:68:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.mean" name="split_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.mean.R:68:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.mean::perf::split:0") at test-perf-ds.mean.R:68:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.names" timestamp="2026-10-17T04:33:45Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="33.808">
+    <testcase time="33.794" classname="perf_ds.names" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.names::perf::combine:0") at test-perf-ds.names.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00599999999997181" classname="perf_ds.names" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.names::perf::combine:0") at test-perf-ds.names.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.0080000000000382" classname="perf_ds.names" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.names.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.names::perf::combine:0") at test-perf-ds.names.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.numNA" timestamp="2026-10-17T04:34:19Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.223">
+    <testcase time="34.212" classname="perf_ds.numNA" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.numNA::perf::combine:0") at test-perf-ds.numNA.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00599999999997181" classname="perf_ds.numNA" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.numNA::perf::combine:0") at test-perf-ds.numNA.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999999545" classname="perf_ds.numNA" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.numNA.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.numNA::perf::combine:0") at test-perf-ds.numNA.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.sqrt" timestamp="2026-10-17T04:34:53Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="33.9">
+    <testcase time="33.89" classname="perf_ds.sqrt" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.sqrt::perf::0") at test-perf-ds.sqrt.R:36:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00599999999997181" classname="perf_ds.sqrt" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.sqrt::perf::0") at test-perf-ds.sqrt.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.0040000000000191" classname="perf_ds.sqrt" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.sqrt.R:36:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.sqrt::perf::0") at test-perf-ds.sqrt.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.standardiseDf" timestamp="2026-10-17T04:35:27Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="64.401">
+    <testcase time="64.391" classname="perf_ds.standardiseDf" name="performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.standardiseDf::perf::0") at test-perf-ds.standardiseDf.R:36:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00500000000010914" classname="perf_ds.standardiseDf" name="performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.standardiseDf::perf::0") at test-perf-ds.standardiseDf.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00499999999988177" classname="perf_ds.standardiseDf" name="performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.standardiseDf.R:36:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.standardiseDf::perf::0") at test-perf-ds.standardiseDf.R:36:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-ds.unique" timestamp="2026-10-17T04:36:31Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="34.254">
+    <testcase time="34.2440000000001" classname="perf_ds.unique" name="combine_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.unique::perf::combine:0") at test-perf-ds.unique.R:37:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00499999999988177" classname="perf_ds.unique" name="combine_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.unique::perf::combine:0") at test-perf-ds.unique.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00500000000010914" classname="perf_ds.unique" name="combine_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-ds.unique.R:37:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("ds.unique::perf::combine:0") at test-perf-ds.unique.R:37:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="perf-void" timestamp="2026-10-17T04:37:06Z" hostname="runnervm8k3b6" tests="3" skipped="0" failures="0" errors="1" time="60.251">
+    <testcase time="60.24" classname="perf_void" name="simple_void_performance">
+      <system-out>Unknown performance profile platform, using 'default'
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("void::perf::void::0") at test-perf-void.R:34:5
+ 2.   \-global .load.pref()</system-out>
+    </testcase>
+    <testcase time="0.00599999999985812" classname="perf_void" name="simple_void_performance">
+      <system-out>cannot open file 'perf_files/armadillo_default_perf-profile.csv': No such file or directory
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("void::perf::void::0") at test-perf-void.R:34:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</system-out>
+    </testcase>
+    <testcase time="0.00500000000010914" classname="perf_void" name="simple_void_performance">
+      <error type="error" message="Error in `file(file, &quot;rt&quot;)`: cannot open the connection ('test-perf-void.R:34:5')">Error in `file(file, "rt")`: cannot open the connection
+Backtrace:
+    x
+ 1. \-global perf.reference.rate("void::perf::void::0") at test-perf-void.R:34:5
+ 2.   \-global .load.pref()
+ 3.     \-utils::read.csv(perf.reference.filename, header = TRUE, sep = ",")
+ 4.       \-utils::read.table(...)
+ 5.         \-base::file(file, "rt")</error>
+    </testcase>
+  </testsuite>
+</testsuites>
