@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="_-vm-test" timestamp="2026-10-24T04:39:51Z" hostname="runnervmtai0g" tests="1" skipped="0" failures="0" errors="0" time="0.326">
+    <testcase time="0.326" classname="__vm_test" name="The_virtual_machine_is_loaded._"/>
+  </testsuite>
+</testsuites>
